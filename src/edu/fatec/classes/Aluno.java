@@ -8,13 +8,13 @@ public class Aluno {
 	public static String quizzes[];
 	public static String testes[];
 	
-//	public static void details(List<Aluno> list) {
-//		for (Aluno a:list) {
-//			System.out.println("Nome: " + a.getNome());
+	public static void details(List<Aluno> list) {
+		for (Aluno a:list) {
+			System.out.println("Nome: " + a.getNome());
 //			System.out.println("Notas dos Deveres: " + Arrays.toString(a.getDeveres()));
 //			System.out.println("Notas dos Quizzes: " + Arrays.toString(a.getQuizzes()));
 //			System.out.println("Notas dos Testes: " + Arrays.toString(a.getTestes()));
-//		}
+		}
 //		for (int i = 0; i < list.size(); i++) {
 //			System.out.println(list.get(i));
 //		}
@@ -22,14 +22,14 @@ public class Aluno {
 //		while (alunoIterator.hasNext()) {
 //			System.out.println(alunoIterator.next());
 //		}
-//	}
-	
-	public static void details(List<Aluno> list, String aluno, String tipoteste) {
-		for(int x = 0; x < list.size() - 1; x++)
-			if(list.equals(list.getNome("aluno")))
-				System.out.println("Aluno: " + list.getNome(x));
 	}
-	
+//	
+//	public static void details(List<Aluno> list, String aluno, String tipoteste) {
+//		for(int x = 0; x < list.size() - 1; x++)
+//			if(list.equals(list.getNome("aluno")))
+//				System.out.println("Aluno: " + list.getNome(x));
+//	}
+
 	public String getNome() {
 		return nome;
 	}

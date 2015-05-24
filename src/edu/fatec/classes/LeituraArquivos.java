@@ -19,16 +19,21 @@ public class LeituraArquivos {
 			}
 			else {
 				Aluno aluno = new Aluno();
+//				System.out.println(lista); // teste
 				aluno.setNome(lista.get(0));
 				aluno.setDeveres(lista.get(1).split(","));
 				aluno.setQuizzes(lista.get(2).split(","));
 				aluno.setTestes(lista.get(3).split(","));
+//				System.out.println(aluno.getNome());
 				listAlunos.add(aluno);
 				lista.clear();
 			}
 			linha = in.readLine();
 		} 
 		f.close();
+//		System.out.println(listAlunos.get(0));
+//		System.out.println(listAlunos.get(1));
+//		System.out.println(listAlunos.get(2));
 		return listAlunos;
 	}
 	
