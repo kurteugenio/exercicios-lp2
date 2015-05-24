@@ -10,8 +10,8 @@ import edu.fatec.classes.LeituraArquivos;
 public class Main {
 
 	public static void main(String[] args) throws IOException {
-		List<Aluno> listAlunos = LeituraArquivos.lerArquivo();
-		Aluno.details(listAlunos);
+		List<Aluno> listaAlunos = LeituraArquivos.lerArquivo();
+		Aluno.details(listaAlunos, "<nome1>", "deveres");
 	}
 
 }
