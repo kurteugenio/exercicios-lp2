@@ -1,6 +1,6 @@
 package edu.fatec.classes;
 
-import java.util.List;
+import java.util.*;
 
 public class Aluno {
 	public static String nome;
@@ -9,35 +9,37 @@ public class Aluno {
 	public static String testes[];
 	
 	public static void details(List<Aluno> list) {
-		System.out.println("Nome: " + nome);
-		System.out.println("Notas dos Deveres: " + deveres);
-		System.out.println("Notas dos Quizzes: " + quizzes);
-		System.out.println("Notas dos Testes: " + testes);
+		for (Aluno s:listAlunos)
+			System.out.println(Arrays.toString(s));
+//		System.out.println("Nome: " + Aluno.getNome());
+//		System.out.println("Notas dos Deveres: " + Arrays.toString(Aluno.getDeveres()));
+//		System.out.println("Notas dos Quizzes: " + Arrays.toString(Aluno.getQuizzes()));
+//		System.out.println("Notas dos Testes: " + Arrays.toString(Aluno.getTestes()));
 	}
 	
-	public String getNome() {
+	public static String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
-		this.nome = nome;
+		Aluno.nome = nome;
 	}
-	public String[] getDeveres() {
+	public static String[] getDeveres() {
 		return deveres;
 	}
 	public void setDeveres(String[] string) {
-		this.deveres = string;
+		Aluno.deveres = string;
 	}
-	public String[] getQuizzes() {
+	public static String[] getQuizzes() {
 		return quizzes;
 	}
 	public void setQuizzes(String[] quizzes) {
-		this.quizzes = quizzes;
+		Aluno.quizzes = quizzes;
 	}
-	public String[] getTestes() {
+	public static String[] getTestes() {
 		return testes;
 	}
 	public void setTestes(String[] testes) {
-		this.testes = testes;
+		Aluno.testes = testes;
 	}
 }
 	

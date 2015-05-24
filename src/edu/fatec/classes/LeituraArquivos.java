@@ -24,6 +24,7 @@ public class LeituraArquivos {
 				aluno.setQuizzes(lista.get(2).split(","));
 				aluno.setTestes(lista.get(3).split(","));
 				listAlunos.add(aluno);
+				lista.clear();
 			}
 			linha = in.readLine();
 		} 
