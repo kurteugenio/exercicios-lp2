@@ -1,40 +1,42 @@
 package edu.fatec.classes;
-
-import java.io.*;
-import java.util.*;
-
+ 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+ 
 public class LeituraArquivos {
-
-	public static List<Aluno> lerArquivo () throws IOException {
-		List<Aluno> listAlunos = new ArrayList<>();
-		List <String> lista = new ArrayList<>();
-		String vetor[];
-		FileReader f = new FileReader("/home/kurt/dados");
-		BufferedReader in = new BufferedReader(f);
-		String linha = in.readLine();
-		while (linha != null) {
-			if (!linha.equals("#")) {
-				vetor = linha.split(":");
-				lista.add(vetor[1]);
-			}
-			else {
-				Aluno aluno = new Aluno();
-//				System.out.println(lista); // teste
-				aluno.setNome(lista.get(0));
-				aluno.setDeveres(lista.get(1).split(","));
-				aluno.setQuizzes(lista.get(2).split(","));
-				aluno.setTestes(lista.get(3).split(","));
-//				System.out.println(aluno.getNome());
-				listAlunos.add(aluno);
-				lista.clear();
-			}
-			linha = in.readLine();
-		} 
-		f.close();
-//		System.out.println(listAlunos.get(0));
-//		System.out.println(listAlunos.get(1));
-//		System.out.println(listAlunos.get(2));
-		return listAlunos;
-	}
-	
+ 
+    public static List<Aluno> lerArquivo() throws IOException {
+        List<Aluno> listAlunos = new ArrayList<>();
+        List<String> lista = new ArrayList<>();
+        FileReader f = new FileReader("dados");
+        BufferedReader in = new BufferedReader(f);
+        String linha = "";
+ 
+        while (linha != null) {
+            linha = in.readLine();
+            lista.add(linha);
+        }
+ 
+        for (int i = 0; i < lista.size(); i = i + 4) {
+            String dado = lista.get(i);
+            if (dado == null) {
+                break;
+            }
+            if (!dado.equals("#")) {
+                Aluno aluno = new Aluno();
+                aluno.setNome(dado.split(":")[1]);
+                aluno.setDeveres(lista.get(i + 1).split(":")[1].split(","));
+                aluno.setQuizzes(lista.get(i + 2).split(":")[1].split(","));
+                aluno.setTestes(lista.get(i + 3).split(":")[1].split(","));
+                listAlunos.add(aluno);
+            } else {
+                i = i - 3;
+            }
+        }
+        f.close();
+        return listAlunos;
+    }
 }
