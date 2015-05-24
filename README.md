@@ -14,6 +14,7 @@ número de registros contidos no arquivo é ilimitado;
 Para cada grupo de registros do arquivo, deverá ser criado um dicionário
 composto por “nome”, “dever de casa”, “quizzes” e “testes”, conforme
 exemplo abaixo:
+
 estudantes = {
 {
 "nome" : "Lloyd" ,
@@ -37,10 +38,15 @@ estudantes = {
 
 Criar um método detail(), que para cada aluno em sua lista de
 alunos, imprima os dados do aluno, da seguinte forma:
-o imprimir o nome do aluno
-o imprimir as notas dos trabalhos de casa do aluno
-o imprimir as notas dos quizzes do aluno
-o imprimir as notas dos testes do aluno
+
+-imprimir o nome do aluno
+
+-imprimir as notas dos trabalhos de casa do aluno
+
+-imprimir as notas dos quizzes do aluno
+
+-imprimir as notas dos testes do aluno
+
 Escrever um método que leia uma lista de números e retorne o resultado
 do cálculo de uma média simples. O método deverá ser único e será
 usada para calcular qualquer média solicitada;
@@ -48,7 +54,7 @@ usada para calcular qualquer média solicitada;
 Escreva um método chamado getAverage() que receba como
 parâmetro um dicionário que representa um registro de estudante como
 entrada e retorna sua média ponderada, considerando:
-o
+
 Multiplicar as três médias por seus respectivos pesos e retornar a
 soma dos três. Lição de casa corresponde a 10%, os
 questionários correspondem a 30% e os testes correspondem a
@@ -57,6 +63,7 @@ questionários correspondem a 30% e os testes correspondem a
 Defina um novo método chamado getLetterGrade() que tenha um
 argumento chamado de pontuação e retorne a nota final do aluno em
 termos de “conceito”, considerando:
+
 Se a
 Else
 Else
@@ -73,6 +80,7 @@ acima: voltar "A"
 70 ou acima: return "C"
 60 ou acima: return "D"
 "F" .
+
 Definir um método chamado getClassAverage() que receba como
 parâmetro uma lista de estudantes e para cada aluno faça:
 
