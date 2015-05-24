@@ -9,33 +9,36 @@ public class Aluno {
 	public static String testes[];
 	
 	public static void details(List<Aluno> list) {
-		for (Aluno s:listAlunos)
-			System.out.println(Arrays.toString(s));
-//		System.out.println("Nome: " + Aluno.getNome());
-//		System.out.println("Notas dos Deveres: " + Arrays.toString(Aluno.getDeveres()));
-//		System.out.println("Notas dos Quizzes: " + Arrays.toString(Aluno.getQuizzes()));
-//		System.out.println("Notas dos Testes: " + Arrays.toString(Aluno.getTestes()));
+//		for (Aluno a:list) {
+//			System.out.println("Nome: " + a.getNome());
+//			System.out.println("Notas dos Deveres: " + Arrays.toString(a.getDeveres()));
+//			System.out.println("Notas dos Quizzes: " + Arrays.toString(a.getQuizzes()));
+//			System.out.println("Notas dos Testes: " + Arrays.toString(a.getTestes()));
+//		}
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(Arrays.toString(list.get(i)));
+		}
 	}
 	
-	public static String getNome() {
+	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		Aluno.nome = nome;
 	}
-	public static String[] getDeveres() {
+	public String[] getDeveres() {
 		return deveres;
 	}
 	public void setDeveres(String[] string) {
 		Aluno.deveres = string;
 	}
-	public static String[] getQuizzes() {
+	public String[] getQuizzes() {
 		return quizzes;
 	}
 	public void setQuizzes(String[] quizzes) {
 		Aluno.quizzes = quizzes;
 	}
-	public static String[] getTestes() {
+	public String[] getTestes() {
 		return testes;
 	}
 	public void setTestes(String[] testes) {

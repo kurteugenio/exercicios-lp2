@@ -1,8 +1,7 @@
 package edu.fatec.dados;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import edu.fatec.classes.Aluno;
 import edu.fatec.classes.Calculo;
